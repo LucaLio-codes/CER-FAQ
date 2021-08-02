@@ -65,7 +65,8 @@ Fragen von SoSe 21
 ### Kannst Du das SIR Modell in Python programmieren?
 <details>
     <summary>Antwort</summary>
-    ```python
+
+```python
     import numpy as np
     import matplotlib.pyplot as plt
     def sir(u):
@@ -89,20 +90,18 @@ Fragen von SoSe 21
     for i in range(200):
         du = sir(u_old)
         tmp = u_old + du
-        print("u_old:", u_old)
-        print("du:", du)
-        print("tmp:", tmp)
         data.append(tmp)
         u_old = tmp
-    print(data)
     plt.plot(data)
     plt.legend(["S","I","R"])
     plt.show()
-    ```
+```
 </details>
 
 ### Wie könnte ein SIEARS (A=Asymptomatic, zweites S=Rückfälle) aussehen?
 <details>
     <summary>Antwort</summary>
+    Grundidee: neue konstante für rückfall (rho) und asympt (alpha)<br>
+    mehr weiß ich auch nicht
 
 </details>
