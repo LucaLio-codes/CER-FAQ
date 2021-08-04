@@ -3,7 +3,7 @@ Hier sind alle Fragen die am Ender jeder Vorlesung stehen gelistet und von mir B
 Alle Antworten sind nach besten Wissen und Gewissen, steinigt mich nicht wenn was Falsch ist <br>
 Fragen von SoSe 21
 # 
-## Vorlesung 0
+## Vorlesung 0 Grundlagen
 
 
 ### Was ist eine Simulation?
@@ -105,3 +105,43 @@ Fragen von SoSe 21
     mehr weiß ich auch nicht
 
 </details>
+
+# 
+## Vorlesung 1 Modellierung
+
+### Was sind Eigenvektoren und wozu braucht man die?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Wie geht der Modellierungsloop?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Wie unterscheiden sich statische und dynamische Modelle?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Was bedeuten zeitdiskret, ortskontinuierlich, stochastisch?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Welche Fragestellungen behandelt die Kinematik?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Wie berechnet man Vorwärtskinematik?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
