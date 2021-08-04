@@ -1,7 +1,8 @@
 # CER Selbsttestfragen
 Hier sind alle Fragen die am Ender jeder Vorlesung stehen gelistet und von mir Beantwortet. <br>
 Alle Antworten sind nach besten Wissen und Gewissen, steinigt mich nicht wenn was Falsch ist <br>
-Fragen von SoSe 21
+Fragen von SoSe 21 <br>
+Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in den Foliensätzen beantwortet 
 # 
 ## Vorlesung 0 Grundlagen
 
@@ -112,6 +113,8 @@ Fragen von SoSe 21
 ### Was sind Eigenvektoren und wozu braucht man die?
 <details>
     <summary>Antwort</summary>
+    "lambda, v sin Eigenwert und der Dazugegörige Eigenvektor von A gdw Av = lambda v"
+    "Eigenvektoren sind nützlich um Matrizen zu diagonalisieren" 
 
 </details>
 
@@ -119,29 +122,49 @@ Fragen von SoSe 21
 <details>
     <summary>Antwort</summary>
 
+```
+    ˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍ                        ˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍ
+    |Problem aus der Realität| -----Modellbildung---> |Mathematisches Problem|
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯                        ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    ^                                                                   |
+    |                                                                   |
+    Überprüfung                                     Anwenden der Egrebnisse
+    |                                               / Methoden
+    |                                                                   |
+    |                                                                   v
+    ˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍ                       ˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍˍ
+    |Sachverhalt in der Realität|<--Interpretation------|Lösung des Problems|
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯                       ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+```
+
 </details>
 
 ### Wie unterscheiden sich statische und dynamische Modelle?
 <details>
     <summary>Antwort</summary>
-
+    Statische Modelle stellen Verschiedene Größen im Modell in Beziehung doer beschreibt eine abhängige Größe mit Hilfe einer anderen, das Model hängt also nur von diesen Größen ab<br>
+    Dynamische Modelle hängen von dem jetzigen zustand, dem vorhergegangenen und diesen Werten ab (man betrachtet die ableitungen)
 </details>
 
 ### Was bedeuten zeitdiskret, ortskontinuierlich, stochastisch?
 <details>
     <summary>Antwort</summary>
-
+    <li>zeitdiskret: zeitunabhängig</li>
+    <li>ortskontinuierlich: Ortsabhängig</li>
+    <li>stockastisch: wahrscheinlich? keine Ahnung steht nicht im Foliensatz</li>
 </details>
 
 ### Welche Fragestellungen behandelt die Kinematik?
 <details>
     <summary>Antwort</summary>
-
+    <li>vorwärts: mit gegebenen Gelenkparameter q: wo steht unser Endeffektor</li>
+    <li>rückwärts: mit welchen Gelenkparameter q erreicht unser Endeffektor die position x</li>
 </details>
 
 ### Wie berechnet man Vorwärtskinematik?
 <details>
     <summary>Antwort</summary>
-
+    Pro gelenk wird das Ursprungskoordinatensystem entsprechend der Gelenkparameter rotiert und Verschoben. 
+    Die Resultierende Matrix hat nun in den ersten drei Spalten und zeilen die Rotation des Endeffektors und in den letzen Spalte mit (x, y, z, 1)^T die Position des Endeffektors 
 </details>
 
