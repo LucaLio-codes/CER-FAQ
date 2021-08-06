@@ -3,7 +3,7 @@ Hier sind alle Fragen die am Ender jeder Vorlesung stehen gelistet und von mir B
 Alle Antworten sind nach besten Wissen und Gewissen, steinigt mich nicht wenn was Falsch ist <br>
 Fragen von SoSe 21 <br>
 Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in den Foliensätzen beantwortet 
-# 
+
 ## Vorlesung 0 Grundlagen
 
 
@@ -107,8 +107,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 
 </details>
 
-# 
-## Vorlesung 1 Modellierung
+## Vorlesung 1 Modellierung/ Vorwärtskinematik
 
 ### Was sind Eigenvektoren und wozu braucht man die?
 <details>
@@ -168,3 +167,63 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     Die Resultierende Matrix hat nun in den ersten drei Spalten und zeilen die Rotation des Endeffektors und in den letzen Spalte mit (x, y, z, 1)^T die Position des Endeffektors 
 </details>
 
+## Vorlesung 2 Inverse Kinematik
+
+## Warum ist inverse Kinematik schwerer als Vorwärtskinematik?
+<details>
+    <summary>Antwort</summary>
+    <li>Vorwärts: eine Explizite Lösung</li>
+    <li>invers: unendlich viele Lösungen möglich</li>
+</details>
+
+## Wieviel Freitheitsgrade hat ein Auto?
+<details>
+    <summary>Antwort</summary>
+    Drei Freiheitsgrade (auf Ebene Projiziert):
+    <li>x</li>
+    <li>y</li>
+    <li>Fahrzeugorientierung</li>
+</details>
+
+## Wenn eine Schlange (mit 200-435 Wirbeln) sich aufrichtet, wiev iele inverse Kinematik-Lösungen hat sie?
+<details>
+    <summary>Antwort</summary>
+    unendlich viele 
+</details>
+
+
+## Was macht das Fixpunktverfahren? Wann konvergiert es?
+<details>
+    <summary>Antwort</summary>
+    <li>Das itterative anwenden einer Funktion auf sich selbst mit startwert x_0</li>
+    <li>wenn d(g(x),g(y) <= kd(x, y) für alle x,y in R^n mit k in [0,1)</li>
+    <li>also wenn alle eigenwerte der Jacobimatrix kleiner 1 (im Einheitskreis)</li>
+</details>
+
+## Was ist das Relaxationsverfahren? Wann ist es besser/schlechter als das Fixpunktverfahren?
+<details>
+    <summary>Antwort</summary>
+    Das Relaxationsverfahren kann die Eigenwerte skallieren, sodass Sie im Einheitskreis liegen. Dies ermöglicht die Konvergenz<br>
+    <li>besser: bestimmen von lokaler Konvergenz bei start x weit entfernt von Lösung</li>
+    <li>schlechter: bestimmen der globalen Konvergenz</li> 
+</details>
+
+
+## Was macht das Newtonverfahren?
+<details>
+    <summary>Antwort</summary>
+    Das Newtonverfahren ist eine Fixpunktiteration mit adaptiver Relaxationsmatrix
+</details>
+
+## Welche Verfahren sind 1. Ordnung, welche zweiter Ordnung?
+<details>
+    <summary>Antwort</summary>
+    FPI und Relaxationsmatrix: 1. Ordnung <br>
+    Newton: 2. Ordnung
+</details>
+
+## Wie kann ich das Newtonverfahren nutzen um ein Optimierungsproblem max_x s_{Note}(x) zu lösen? Z.B. für s_{Note}(x) = exp(−x) (1 − exp(−x))^{−2}? Tip: Nullstelle von s'_{Note}(x) = 0
+<details>
+    <summary>Antwort</summary>
+    keine Ahnung 
+</details>
