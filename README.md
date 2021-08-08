@@ -277,5 +277,6 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann ich ein einfaches mechanisches System modellieren?
 <details>
     <summary>Antwort</summary>
-
+    Freischneidem: betrachten der einzelnen wirkenden Kräfte;
+    anschließend aufsummieren
 </details>
