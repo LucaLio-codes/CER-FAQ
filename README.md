@@ -265,7 +265,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was ist die Dynamikgleichung eines Feder-Masse-Dämpfer Systems?
 <details>
     <summary>Antwort</summary>
-
+    <img src="bilder/Feder-Masse-Daempfer.PNG" alt="Feder-Masse-Daempfer">
 </details>
 
 ### Was ist die Dynamikgleichung eines Pendels?
