@@ -169,14 +169,14 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 
 ## Vorlesung 2 Inverse Kinematik
 
-## Warum ist inverse Kinematik schwerer als Vorwärtskinematik?
+### Warum ist inverse Kinematik schwerer als Vorwärtskinematik?
 <details>
     <summary>Antwort</summary>
     <li>Vorwärts: eine Explizite Lösung</li>
     <li>invers: unendlich viele Lösungen möglich</li>
 </details>
 
-## Wieviel Freitheitsgrade hat ein Auto?
+### Wieviel Freitheitsgrade hat ein Auto?
 <details>
     <summary>Antwort</summary>
     Drei Freiheitsgrade (auf Ebene Projiziert):
@@ -185,14 +185,14 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <li>Fahrzeugorientierung</li>
 </details>
 
-## Wenn eine Schlange (mit 200-435 Wirbeln) sich aufrichtet, wiev iele inverse Kinematik-Lösungen hat sie?
+### Wenn eine Schlange (mit 200-435 Wirbeln) sich aufrichtet, wiev iele inverse Kinematik-Lösungen hat sie?
 <details>
     <summary>Antwort</summary>
     unendlich viele 
 </details>
 
 
-## Was macht das Fixpunktverfahren? Wann konvergiert es?
+### Was macht das Fixpunktverfahren? Wann konvergiert es?
 <details>
     <summary>Antwort</summary>
     <li>Das itterative anwenden einer Funktion auf sich selbst mit startwert x_0</li>
@@ -200,7 +200,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <li>also wenn alle eigenwerte der Jacobimatrix kleiner 1 (im Einheitskreis)</li>
 </details>
 
-## Was ist das Relaxationsverfahren? Wann ist es besser/schlechter als das Fixpunktverfahren?
+### Was ist das Relaxationsverfahren? Wann ist es besser/schlechter als das Fixpunktverfahren?
 <details>
     <summary>Antwort</summary>
     Das Relaxationsverfahren kann die Eigenwerte skallieren, sodass Sie im Einheitskreis liegen. Dies ermöglicht die Konvergenz<br>
@@ -209,21 +209,73 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 </details>
 
 
-## Was macht das Newtonverfahren?
+### Was macht das Newtonverfahren?
 <details>
     <summary>Antwort</summary>
     Das Newtonverfahren ist eine Fixpunktiteration mit adaptiver Relaxationsmatrix
 </details>
 
-## Welche Verfahren sind 1. Ordnung, welche zweiter Ordnung?
+### Welche Verfahren sind 1. Ordnung, welche zweiter Ordnung?
 <details>
     <summary>Antwort</summary>
     FPI und Relaxationsmatrix: 1. Ordnung <br>
     Newton: 2. Ordnung
 </details>
 
-## Wie kann ich das Newtonverfahren nutzen um ein Optimierungsproblem max_x s_{Note}(x) zu lösen? Z.B. für s_{Note}(x) = exp(−x) (1 − exp(−x))^{−2}? Tip: Nullstelle von s'_{Note}(x) = 0
+### Wie kann ich das Newtonverfahren nutzen um ein Optimierungsproblem max_x s_{Note}(x) zu lösen? Z.B. für s_{Note}(x) = exp(−x) (1 − exp(−x))^{−2}? Tip: Nullstelle von s'_{Note}(x) = 0
 <details>
     <summary>Antwort</summary>
     keine Ahnung 
+</details>
+
+## Vorlesung 3 Dynamische Modelle
+
+### Was ein typisches Modell für die Federkraft?
+<details>
+    <summary>Antwort</summary>
+    F<sub>Feder</sub> = k<sub>p</sub> (x<sub>ref</sub>-x) <br>
+    mit k<sub>p</sub> als Federkonstante
+</details>
+
+### Was ein typisches Modell für Reibung?
+<details>
+    <summary>Antwort</summary>
+    F<sub>Dämpfer</sub> = -k<sub>d</sub>x' <br>
+    mit k<sub>d</sub> als Dämperfkonstante
+</details>
+
+### Wie wirken sich Kräfte auf die Position eines Körpers aus?
+<details>
+    <summary>Antwort</summary>
+    Kräfte ändern die geschwindigkeit eines Körpers und somit auch die Position
+</details>
+
+### Wie wirken sich Kräfte auf die Orientierung eines Körpers aus?
+<details>
+    <summary>Antwort</summary>
+    Garnicht, Drehmomente ändern die Orientierun
+</details>
+
+### Müssen wir bei Punktmassen die Orientierung modellieren?
+<details>
+    <summary>Antwort</summary>
+    Nein
+</details>
+
+### Was ist die Dynamikgleichung eines Feder-Masse-Dämpfer Systems?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Was ist die Dynamikgleichung eines Pendels?
+<details>
+    <summary>Antwort</summary>
+    <img src="bilder/pendel.PNG" alt="Pendel">
+</details>
+
+### Wie kann ich ein einfaches mechanisches System modellieren?
+<details>
+    <summary>Antwort</summary>
+
 </details>
