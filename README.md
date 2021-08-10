@@ -274,9 +274,66 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <img src="bilder/pendel.PNG" alt="Pendel">
 </details>
 
+
 ### Wie kann ich ein einfaches mechanisches System modellieren?
 <details>
     <summary>Antwort</summary>
     Freischneidem: betrachten der einzelnen wirkenden Kräfte;
     anschließend aufsummieren
+</details>
+
+## Vorlesung 4
+
+### Bestimme die Gleichgewichtslösungen des SIR-Modells? Was kann man den Politikern raten?
+<details>
+    <summary>Antwort</summary>
+
+</details>
+
+### Kann eine ODE dritter Ordnung auf eine ODE erster Ordnung reduziert werden?
+<details>
+    <summary>Antwort</summary>
+    ja, einführen von einer neuen Zustandsvariable wobei z = (x, x', x'') und somit z' = z(x', x'', x''')
+
+</details>
+
+### Was bedeutet autonom? Was bedeutet zeitinvariant?
+<details>
+    <summary>Antwort</summary>
+    autonom: die Zeit t komm nurnoch parametrisch vor <br>
+    zeitinvariant: die zeit kommt nich vor
+
+</details>
+
+### Was ist ein lineares System?
+<details>
+    <summary>Antwort</summary>
+    Bei linearen ODEs ist die Funktion f(x(t), u(t)) linear
+
+</details>
+
+### Wie kann man die Dynamik eines Roboters mit steifen „Links“ aufschreiben?
+<details>
+    <summary>Antwort</summary>
+    als lineare ode 1. Ordnun
+</details>
+
+### Wozu braucht man statische Modelle beim Brückenbau und wozu dynamische?
+<details>
+    <summary>Antwort</summary>
+    statisch: wie lang wird meine Brücke, wie viel gewicht hällt sie <br>
+    dynamisch: wie verhält sich meine Brücke im Wind
+</details>
+
+### Wenn ich eine Brücke beschreiben möchte, was für eine Differentialgleichung brauche ich?
+<details>
+    <summary>Antwort</summary>
+    Partielle DGL 2.Ordnung (?)
+</details>
+
+### Was ist ein stationärer Zustand und wie hängt er mit der Gleichgewichtslösung zusammen?
+<details>
+    <summary>Antwort</summary>
+    Ein zustand in dem die beschleunigung und geschwindigkeit = 0 ist. <br>
+    eine gleichgewichtslösung ist ein kanidat für einen stationären zustand
 </details>
