@@ -337,3 +337,49 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     Ein zustand in dem die beschleunigung und geschwindigkeit = 0 ist. <br>
     eine gleichgewichtslösung ist ein kanidat für einen stationären zustand
 </details>
+
+## Vorlesung 5
+### Was bedeutet Linearisierung? Wann kann ich sie anwenden?
+<details>
+    <summary>Antwort</summary>
+    Approximieren eines Systems x'(t) = f(x(t), u(t)) in der nähe eines Arbeitspunktes durch eine lineares x' = Ax +Bu<br>
+    Kann angewendet werden bei Systemen mit Gleichgewichtslösungen <br>
+    nicht anwendbar wenn der AP in einer Unstetigkeit in der 1. oder 2. Ableitung hat (sprung oder knick)
+</details>
+
+### Wie kann ich ein lineares System analysieren? Was bedeuten Eigenwerte und -vektoren in diesem Zusammenhang?
+<details>
+    <summary>Antwort</summary>
+    Man kann das system Lösen, dadurch lässt sich bestimen ob das System Osziliert oder stabil ist
+</details>
+
+### Was sagt der Imaginärteil der Eigenwerte über Oszillationen aus?
+<details>
+    <summary>Antwort</summary>
+    wenn ein Immaginärteil vorhanden schwingt das System
+</details>
+
+### Was sagt der Realteil der Eigenwerte über Stabilität aus?
+<details>
+    <summary>Antwort</summary>
+    nur wenn alle Realteile der Eigenwerte negativ sind schwingt das system nicht
+</details>
+
+### Was passiert bei einem linearen System bei Re(λ) = 0 und Im(λ) != 0?
+<details>
+    <summary>Antwort</summary>
+    dauerhafte oszilation
+</details>
+
+### Was passiert bei einem nichtlinearen System bei Re(λ) = 0 und Im(λ) != 0?
+<details>
+    <summary>Antwort</summary>
+    oszilation nicht grarantiert
+</details>
+
+### Wie sieht das Zeitverhalten eines van der Pol-Oszillators aus?
+<details>
+    <summary>Antwort</summary>
+    zeitinvariant
+</details>
+
