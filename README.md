@@ -383,3 +383,68 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     zeitinvariant
 </details>
 
+## Vorlesung 6
+
+### Kann man per „Software“ eine künstliche Feder oder Dämpferhinzufügen?
+<details>
+    <summary>Antwort</summary>
+        Komt auf den Kontext an. In einer Simulation, klar, der Ganze ablauf ist künstlich.
+        Am echten System braucht man eine möglichkeit kräfte wirken zu lassen. Die Programmierte feder könnte z.B anhand eines Bildes des Systems einen Motor steuern und somit
+        eine Feder simulieren
+</details>
+
+### Was ist der Unterschied zwischen Steuerung und Regelung?
+<details>
+    <summary>Antwort</summary>
+    Steuerung ist zeitabhänig vorbestimmt, Regelung ist nur abhängig vom vorhergehenden Zustand
+</details>
+
+### Was ist der Unterschied zwischen Trajektorienregelung und „Set Point“ Regelung?
+<details>
+    <summary>Antwort</summary>
+    Trajektorienregelung ist zeitabhängig, man versucht also in jedem zeitpunkt t x_des(t) nahe x(t) zu erreichen.
+    Set point: System soll bis zu zeitpunkt x spätestens stabil sein (?)
+</details>
+
+### Was ist ein PD-Regler? Was würde einen PID-Regler ausmachen?
+<details>
+    <summary>Antwort</summary>
+    P = Proportional (die Feder) <br>
+    D = Derivative (der Dämpfer) <br>
+    I = Integral 
+</details>
+
+### Was ist ein Zustandsregler?
+<details>
+    <summary>Antwort</summary>
+    ein PD reger in Matrixfor also u = Kx
+</details>
+
+### Was bedeuten open-loop und closed loop?
+<details>
+    <summary>Antwort</summary>
+    open: steuerung; steuergrößen abhängig von Zeit <br>
+    closed: Abhängig von zustand x(t) (Feedback)
+</details>
+
+### Was bedeutet feedforward und was feedback?
+<details>
+    <summary>Antwort</summary>
+    feedback: Closed-Loop regelung <br>
+    feedforward: open-loop Steuerung
+</details>
+
+### Wie kann man den geschlossenen Regelkreis als Differentialgleichung beschreiben?
+<details>
+    <summary>Antwort</summary>
+    x' = f(x, u(x))
+</details>
+
+### Was ist (über-/unter-)kritische Dämpfung?
+<details>
+    <summary>Antwort</summary>
+    Ein System ist ...
+    ... bei einer doppelten, reelen Nullstelle kritisch gedämpft => xdes wird schnell ereicht ohne überschwingen
+    ... bei einer einfachen, reelen Nullstelle überkritisch gedämpft => langsamer aber ohne überschwingen
+    ... bei einer doppelten, komplexen Nullstelle unterkritisch gedämpf => schnell aber überschwingen
+</details>
