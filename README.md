@@ -338,7 +338,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     eine gleichgewichtslösung ist ein kanidat für einen stationären zustand
 </details>
 
-## Vorlesung 5
+## Vorlesung 5 Stabilität
 ### Was bedeutet Linearisierung? Wann kann ich sie anwenden?
 <details>
     <summary>Antwort</summary>
@@ -383,7 +383,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     zeitinvariant
 </details>
 
-## Vorlesung 6
+## Vorlesung 6 PD Regler
 
 ### Kann man per „Software“ eine künstliche Feder oder Dämpferhinzufügen?
 <details>
@@ -447,4 +447,76 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     ... bei einer doppelten, reelen Nullstelle kritisch gedämpft => xdes wird schnell ereicht ohne überschwingen
     ... bei einer einfachen, reelen Nullstelle überkritisch gedämpft => langsamer aber ohne überschwingen
     ... bei einer doppelten, komplexen Nullstelle unterkritisch gedämpf => schnell aber überschwingen
+</details>
+
+## Vorlesung 7 Numerische Integration
+
+### Warum ist numerische Integration notwendig?
+<details>
+    <summary>Antwort</summary>
+    zum Lösen von nichtlinearen ODEs
+</details>
+
+### Wie liest man das zeitliche Verhalten aus einem Richtungsfeld?
+<details>
+    <summary>Antwort</summary>
+    wan folgt den Pfeilen vom startpunkt in positiver x-Richtung
+</details>
+
+### Was unterscheidet ein explizite und implizite Verfahren?
+<details>
+    <summary>Antwort</summary>
+    explizites Verfahren: x_k+1 nur abhängig von x_k <br>
+    implizites Verfahren: x_k+1 von sich selbst abhängig
+
+</details>
+
+### Was sind Einschrittverfahren und deren Konsistenzbedingung?
+<details>
+    <summary>Antwort</summary>
+    Einschrittverfahren haben die Form x_k+1 = x_k + h * Verfahrensfunktion <br>
+    Konsistenzbedingung : für h -> 0 ist Verfahrensfunktion -> f(x_k)
+</details>
+
+### Warum sind Verfahren 1. Ordnung prinzipiell problematisch?
+<details>
+    <summary>Antwort</summary>
+    weil sich approximationsfehler propagieren, sprich in jedem schritt größer werden
+</details>
+
+### Was sind Euler-Verfahren?
+<details>
+    <summary>Antwort</summary>
+    Euler Verfahren sind einschrittverfahren erster Ordnung:
+    <li>Explizit: x_k+1 = x_k + h f(x_k)</li>
+    <li>Implizit: x_k+1 = x_k + h f(x_k+1)</li>
+</details>
+
+### Was ist das Heun-Verfahren? Wann sollte ich es einsetzen?
+<details>
+    <summary>Antwort</summary>
+    Verfahren 2. Ordnung.
+    <img src="bilder/Heun.PNG" alt="Heun">
+    sollte genutzt werden wenn man bei niedriger Anzahl an stützpunkten bessere Ergebnisse als bei Euler braucht
+</details>
+
+### Was ist das Runge-Kutta-Verfahren? Wann verwendet man es?
+<details>
+    <summary>Antwort</summary>
+    Verfahren der 4. Ordnung. <br>
+    <img src="bilder/RK4.PNG" alt="RK4">
+    höherer Zeitaufwand für mehr präzision
+</details>
+
+### Wodurch entstehen Approximationsfehler?6
+<details>
+    <summary>Antwort</summary>
+    <li>durch die Integralaproximation</li>
+    <li>durch runden</li>
+</details>
+
+### Was ist Schrittweitensteuerung?
+<details>
+    <summary>Antwort</summary>
+    SChritweitensteuerung ermöglich die minimierung des Approximationsfehlers
 </details>
