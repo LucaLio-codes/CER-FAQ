@@ -520,3 +520,69 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <summary>Antwort</summary>
     SChritweitensteuerung ermöglich die minimierung des Approximationsfehlers
 </details>
+
+
+## Vorlesung 8 Numerische Aspekte der Simulation von ODEs
+
+### Wann heisst eine ODE steif?
+<details>
+    <summary>Antwort</summary>
+    Wenn Tmax deutlich größer Tmin; also die schnellste Zeitcharacteristik deutlich schneller der langsamsten <br>
+    Faustregel: wenn Tmax/Tmin >= 10² dann ist ODE steif 
+</details>
+
+### Warum ist das problematisch?
+<details>
+    <summary>Antwort</summary>
+    wirkt sich negativ auf die numerische Lösbarkeit aus, höhre Schrittweite wird benötigt. (Mehr berechnungen)
+</details>
+
+### Gib mehrere praktische Beispiele für steife ODEs!
+<details>
+    <summary>Antwort</summary>
+    Doppelpendel(?) 
+</details>
+
+### Warum sind unstete ODEs wichtig?
+<details>
+    <summary>Antwort</summary>
+    Sie werden benötigt um z.B einen Aufprall, eine Gangschaltung, Ventile zu Modellieren
+</details>
+
+### Was für Probleme haben sie?
+<details>
+    <summary>Antwort</summary>
+    An der Unstetigkeit existiert keine Ableitung => Numerische Lösungsverfahren verlangen aber nach stetiger Differenzierbarkeit
+</details>
+
+### Wie werden Zahlen dargestellt?
+<details>
+    <summary>Antwort</summary>
+    <li>für Menschen: Je nach Anwendung verschieden genau, fast immer Base 10</li>
+    <li>für Rechner: Je nach Anwendung genau base 2, hier ist wahrscheinlich der IEEE 754 Float gemeint, der nach dem schema [Kommazahl][Potenz] Aufgebaut ist</li>
+</details>
+
+### Warum ist die Ariane 5 abgestürzt? Was hat das mit Rundung zu tun?
+<details>
+    <summary>Antwort</summary>
+    64 Bit float to 16 Bit int Conversion
+</details>
+
+### Wie setzen sich Rundungsfehler fort? Was hat das mit Konditionierung zu tun?
+<details>
+    <summary>Antwort</summary>
+    z.B bei Expliziten Verfahren wo der Fehler in die nächste iteration mitgenommen wird und sich addiert. <br>
+    Gut konditionierte Funktionen sind nicht so anfällig, da kleine Abweichung in der Eingabe auch kleine Änderungen in der Ausgabe nach sich führen.
+</details>
+
+### Wie hängen Mess- und Rundungsfehler zusammen?
+<details>
+    <summary>Antwort</summary>
+    beides sind Fehler, beide können gleichzeitig auftreten
+</details>
+
+### Welche Fehlerart ist relevanter in der Praxis?
+<details>
+    <summary>Antwort</summary>
+    Gerundet wird einmal am Ende, gemessen wird jede relevante Variable, daher tät ich sagen der Messfehler
+</details>
