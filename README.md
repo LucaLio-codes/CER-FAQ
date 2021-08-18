@@ -148,8 +148,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was bedeuten zeitdiskret, ortskontinuierlich, stochastisch?
 <details>
     <summary>Antwort</summary>
-    <li>zeitdiskret: zeitunabhängig</li>
-    <li>ortskontinuierlich: Ortsabhängig</li>
+    <li>zeitdiskret:  Das Modell beschreibt das System für bestimmte abzählbare Zeitpunkte.</li>
+    <li>ortskontinuierlich: Das Modell beschreibt das System für kontinuierliche (unendlich viele nicht abzählbare) Orte.</li>
     <li>stockastisch: wahrscheinlich? keine Ahnung steht nicht im Foliensatz</li>
 </details>
 
@@ -253,7 +253,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie wirken sich Kräfte auf die Orientierung eines Körpers aus?
 <details>
     <summary>Antwort</summary>
-    Garnicht, Drehmomente ändern die Orientierun
+    Kräfte können drehmomente erzeugen, welche wiederum den Körper drehen
 </details>
 
 ### Müssen wir bei Punktmassen die Orientierung modellieren?
