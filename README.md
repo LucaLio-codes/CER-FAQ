@@ -586,3 +586,56 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <summary>Antwort</summary>
     Gerundet wird einmal am Ende, gemessen wird jede relevante Variable, daher tät ich sagen der Messfehler
 </details>
+
+## Vorlesung 9
+### Was ist die „Methode der kleinsten Quadrate“ (Least Squares)?
+<details>
+    <summary>Antwort</summary>
+    Linear Least Squares Progression betrachtet Modelle der Form <br>
+    Parameter * Feature Funktion
+</details>
+
+### Welche Kostenfunktion ist hier gemeint?
+<details>
+    <summary>Antwort</summary>
+    l(y_i -f(x_i)) also die Funktion die den Fehler als eingabe hat <br>
+    bei leas squares ist es l(e_i) = e_i^2
+</details>
+
+### Welche Annahmen liegen „Least Squares“ zu Grunde?
+<details>
+    <summary>Antwort</summary>
+    kurz: exaktes Messen <br>
+    lang: 
+    <li>Unabhängige Datenpunkte</li>
+    <li>Alle Datenpunkte Gleichverteilt</li>
+    <li>Kein Rauschen am Eingang</li>
+    <li>Eingänge nicht linear korelliert</li>
+    <li>Rauschen des Ausgangs ist nicht linear korelliert</li>
+</details>
+
+### Welche Annahmen werden bei realen Systemen oft verletzt?
+<details>
+    <summary>Antwort</summary>
+    <li>Kein Rauschen am Eingang</li>
+    <li>Rauschen des Ausgangs ist nicht linear korelliert?</li>
+</details>
+
+### Was sollte man tun, wenn die Eingangsdaten verrauscht sind?
+<details>
+    <summary>Antwort</summary>
+    Filtern, aber vorsichtig; Anderes Schätzverfahren
+</details>
+
+### Ist Least Squares robust gegenüber verrauschten Ausgangsdaten?
+<details>
+    <summary>Antwort</summary>
+    Es darf nur nicht linear Korelliert sein
+</details>
+
+### Warum sollte man mehrmals mit unterschiedlichen Daten schätzen?
+<details>
+    <summary>Antwort</summary>
+    Um zu verhindern dass die gewählten Parameter nur auf den gewählten Daten passt sondern tatsächlich das System beschreibt (kinda overfitting)
+</details>
+
