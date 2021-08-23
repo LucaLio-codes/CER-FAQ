@@ -639,3 +639,62 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     Um zu verhindern dass die gewählten Parameter nur auf den gewählten Daten passt sondern tatsächlich das System beschreibt (kinda overfitting)
 </details>
 
+## Vorlesung 10: Black-Box-Modelle
+
+### Warum ist nichtlinear least squares schwerer als linearer least squares?
+<details>
+    <summary>Antwort</summary>
+    für die nichtlineare least squares gibt es keine Analytische Lösung, folglich muss eine Lösung mit passenden Tools erarbeitet werden
+</details>
+
+### Warum ist White-Box System Identification immer unvollständig?
+<details>
+    <summary>Antwort</summary>
+    Da man nicht alle Parameter kennt, oder selbst wenn nicht alle leicht modellierbar sind.
+</details>
+
+### Warum sind „unvollständige“ Modelle gefährlich?
+<details>
+    <summary>Antwort</summary>
+    können systematisch die Parameterschätzung verfälschen (Think Jan und sein Roboter den er direkt geschrottet hat)
+</details>
+
+### Was ist an realen Systemen schwer zu modellieren?
+<details>
+    <summary>Antwort</summary>
+    Reibung, Softbody Kollisions, Effektde des Gewählten Antriebs (Gerbox/ Kabel etc.)
+</details>
+
+### Was für Black-Box Basis Funktionen gibt es?
+<details>
+    <summary>Antwort</summary>
+    unzählig viele, in der Vorlesung genannt:
+    <li> Monome </li>
+    <li> Cosinusterme</li>
+</details>
+
+### Was sind die Probleme mit Basis-Funktionen? Was passiert bei zu vielen oder zu wenigen?
+<details>
+    <summary>Antwort</summary>
+    Zu wenige: Die Ergebnisse sind Qualitativ schlecht <br>
+    zu viele: overfitting (?)
+</details>
+
+### Wie unterscheiden sich neuronale Netze von Basis Funktion-Ansätzen?
+<details>
+    <summary>Antwort</summary>
+    Neuronale Netzwerke sind die aneinanderkettung beliebig vieler Modellen aneinander
+</details>
+
+### Was für Funktionen können sie repräsentieren?
+<details>
+    <summary>Antwort</summary>
+    Theoretisch ja, praktisch je komplexer das Problem desto mehr Daten werden benötigt, teilweise unpraktikabel
+</details>
+
+### Wie viele Basis Funktionen kann ein neuronales Netz repräsentieren?
+<details>
+    <summary>Antwort</summary>
+    alle?
+</details>
+
