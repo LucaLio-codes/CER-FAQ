@@ -698,3 +698,48 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     alle?
 </details>
 
+## Vorlesung 11: Verifikation und Validierung
+
+### Was für Fehlerquellen gibt es bei der Parameterschätzung?
+<details>
+    <summary>Antwort</summary>
+    <li>Modellierungsfehler <li>
+    test
+    </li></li>
+</details>
+
+### Wie kann man mit Modellfehlern umgehen?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Was bedeuten Verifikation und Validierung?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Wie unterscheidet sich Verifikation von Programmen zu Verifikation von Modellen? Gibt es ein „wahres“ Modell?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Wie unterscheidet sich Validierung von Programmen zu Validierung von Modellen?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Was sind Test- und Trainingssets? Wie generiert man diese Datensätze?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Was passiert wenn der Testfehler hoch und der Trainingsfehler niedrig ist?
+<details>
+    <summary>Antwort</summary>
+</details>
+
+### Wann sollte man White-Box Modelle nehmen? Wann nicht?
+<details>
+    <summary>Antwort</summary>
+</details>
+
