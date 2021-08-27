@@ -36,7 +36,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was haben Modelle mit Wissenschaft zu tun?
 <details>
     <summary>Antwort</summary>
-    Modelle Ermöglichen testbare Vorhersagen und somit die "Scientific Emthod"
+    Modelle Ermöglichen testbare Vorhersagen und somit die "Scientific Method"
 </details>
 
 ### Mit welchen Schritten erstellt man Modelle für ein System?
@@ -141,7 +141,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie unterscheiden sich statische und dynamische Modelle?
 <details>
     <summary>Antwort</summary>
-    Statische Modelle stellen Verschiedene Größen im Modell in Beziehung doer beschreibt eine abhängige Größe mit Hilfe einer anderen, das Model hängt also nur von diesen Größen ab<br>
+    Statische Modelle stellen Verschiedene Größen im Modell in Beziehung oder beschreibt eine abhängige Größe mit Hilfe einer anderen, das Model hängt also nur von diesen Größen ab<br>
     Dynamische Modelle hängen von dem jetzigen zustand, dem vorhergegangenen und diesen Werten ab (man betrachtet die ableitungen)
 </details>
 
@@ -150,7 +150,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <summary>Antwort</summary>
     <li>zeitdiskret:  Das Modell beschreibt das System für bestimmte abzählbare Zeitpunkte.</li>
     <li>ortskontinuierlich: Das Modell beschreibt das System für kontinuierliche (unendlich viele nicht abzählbare) Orte.</li>
-    <li>stockastisch: wahrscheinlich? keine Ahnung steht nicht im Foliensatz</li>
+    <li>stochastisch: Zustand wird als verauschte Punktmasse betrachtet</li>
 </details>
 
 ### Welche Fragestellungen behandelt die Kinematik?
@@ -163,8 +163,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie berechnet man Vorwärtskinematik?
 <details>
     <summary>Antwort</summary>
-    Pro gelenk wird das Ursprungskoordinatensystem entsprechend der Gelenkparameter rotiert und Verschoben. 
-    Die Resultierende Matrix hat nun in den ersten drei Spalten und zeilen die Rotation des Endeffektors und in den letzen Spalte mit (x, y, z, 1)^T die Position des Endeffektors 
+    Für jedes Gelenk stellt man ein eigenes Koordinatensystem S<sub>i</sub> auf. Von den Gelenkvariablen q abhängige Transformationsmatrizen <sup> i-1 </sup>T<sub>i</sub> geben die Transformation von einem Koordinatensystem S <sub> i </sub> in ein Koordinatensystem S <sub>i-1</sub> an. Durch ihre Verkettung (durch Multiplikation) erhält man die Transformationsmatrix <sup>0</sup>T<sub>n</sub>, die aus der Position eines Punktes <sup>n</sup>p bezüglich des Endeffektor-Koordinatensystems dessen Position <sup>0</sup>p bezüglich der Basis (des globalen Koordinatensystems) berechnet.
 </details>
 
 ## Vorlesung 2 Inverse Kinematik
@@ -173,7 +172,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 <details>
     <summary>Antwort</summary>
     <li>Vorwärts: eine Explizite Lösung</li>
-    <li>invers: unendlich viele Lösungen möglich</li>
+    <li>invers: unendlich viele Lösungen möglich (oder auch keine)</li>
 </details>
 
 ### Wieviel Freitheitsgrade hat ein Auto?
@@ -195,7 +194,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was macht das Fixpunktverfahren? Wann konvergiert es?
 <details>
     <summary>Antwort</summary>
-    <li>Das itterative anwenden einer Funktion auf sich selbst mit startwert x_0</li>
+    <li>Das itterative anwenden einer Funktion auf sich selbst mit startwert x_0 zum Ermitteln einer Nullstelle</li>
     <li>wenn d(g(x),g(y) <= kd(x, y) für alle x,y in R^n mit k in [0,1)</li>
     <li>also wenn alle eigenwerte der Jacobimatrix kleiner 1 (im Einheitskreis)</li>
 </details>
@@ -203,8 +202,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was ist das Relaxationsverfahren? Wann ist es besser/schlechter als das Fixpunktverfahren?
 <details>
     <summary>Antwort</summary>
-    Das Relaxationsverfahren kann die Eigenwerte skallieren, sodass Sie im Einheitskreis liegen. Dies ermöglicht die Konvergenz<br>
-    <li>besser: bestimmen von lokaler Konvergenz bei start x weit entfernt von Lösung</li>
+    Beim Relaxationsverfahren wird die Funktion f(x) mit einer Relaxationsmatrix A multipliziert, damit das Fixpunktverfahren konvergiert<br>
+    <li>besser: bestimmen von lokaler Konvergenz bei start x in Nähe von Lösung</li>
     <li>schlechter: bestimmen der globalen Konvergenz</li> 
 </details>
 
@@ -225,7 +224,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann ich das Newtonverfahren nutzen um ein Optimierungsproblem max_x s_{Note}(x) zu lösen? Z.B. für s_{Note}(x) = exp(−x) (1 − exp(−x))^{−2}? Tip: Nullstelle von s'_{Note}(x) = 0
 <details>
     <summary>Antwort</summary>
-    keine Ahnung 
+    Mit f(x) = s’(x) = 0 erhält man ein Nullstellenproblem. Die Funktion f(x) muss noch einmal abgeleitet werden, um das Newtonverfahren x<sub>i+1</sub> = x<sub>i</sub> – f(x<sub>i</sub>)/f’(x<sub>i</sub>) anwenden zu können.
+    Allerdings sieht man schon vor Durchführung des Verfahrens, dass ein Extremum bei x=0 liegt, wo die Funktion gegen Unendlich geht. Das Plotten des Graphen macht deutlich, dass es keine weiteren Extrema gibt.
 </details>
 
 ## Vorlesung 3 Dynamische Modelle
@@ -247,13 +247,15 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie wirken sich Kräfte auf die Position eines Körpers aus?
 <details>
     <summary>Antwort</summary>
-    Kräfte ändern die geschwindigkeit eines Körpers und somit auch die Position
+    Kräfte ändern die geschwindigkeit eines Körpers und somit auch die Position<br>
+    F = mx''
 </details>
 
 ### Wie wirken sich Kräfte auf die Orientierung eines Körpers aus?
 <details>
     <summary>Antwort</summary>
-    Kräfte können drehmomente erzeugen, welche wiederum den Körper drehen
+    Kräfte können drehmomente erzeugen, welche wiederum den Körper drehen <br>
+    Summe der Dremomente F<sub>i</sub> r<sub>i</sub> = Trägheitsmoment mal Winkelbeschleunigung
 </details>
 
 ### Müssen wir bei Punktmassen die Orientierung modellieren?
@@ -278,8 +280,13 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann ich ein einfaches mechanisches System modellieren?
 <details>
     <summary>Antwort</summary>
-    Freischneidem: betrachten der einzelnen wirkenden Kräfte;
-    anschließend aufsummieren
+    <ol>
+        <li>Mögliche Vereinfachungen treffen (Körper als Punktmassen darstellen, Seil als Stab annehmen, …)</li>
+        <li>Entscheiden, ob man mit Kräften und Positionen oder mit Momenten und Winkeln arbeitet</li>
+        <li>Alle wirkenden Kräfte/ Momente ermitteln (Auch Dämpfung!)</li>
+        <li>Masse/ Trägheitsmoment ermitteln</li>
+        <li>In Newtons 2. Gesetz einsetzen</li>
+    </ol>
 </details>
 
 ## Vorlesung 4
@@ -287,7 +294,9 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Bestimme die Gleichgewichtslösungen des SIR-Modells? Was kann man den Politikern raten?
 <details>
     <summary>Antwort</summary>
+    Für eine Gleichgewichtslösung muss die Änderung von s, i und r null sein. Aus dr/dt = γ i = 0 folgt bei gegebenem γ, dass i = 0 sein muss. Dadurch werden auch die beiden anderen Gleichungen 0. Also sind alle Zustände mit i=0 Gleichgewichtslösungen.
 
+    Die Pandemie kann also nicht in einem Gleichgewicht sein, solange es noch infizierte Personen gibt.
 </details>
 
 ### Kann eine ODE dritter Ordnung auf eine ODE erster Ordnung reduziert werden?
@@ -301,7 +310,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 <details>
     <summary>Antwort</summary>
     autonom: die Zeit t komm nurnoch parametrisch vor <br>
-    zeitinvariant: die zeit kommt nich vor
+    zeitinvariant: die zeit kommt nicht vor
 
 </details>
 
@@ -315,7 +324,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann man die Dynamik eines Roboters mit steifen „Links“ aufschreiben?
 <details>
     <summary>Antwort</summary>
-    als lineare ode 1. Ordnun
+    als lineare ODE 1. Ordnung
 </details>
 
 ### Wozu braucht man statische Modelle beim Brückenbau und wozu dynamische?
@@ -335,7 +344,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 <details>
     <summary>Antwort</summary>
     Ein zustand in dem die beschleunigung und geschwindigkeit = 0 ist. <br>
-    eine gleichgewichtslösung ist ein kanidat für einen stationären zustand
+    eine gleichgewichtslösung ist ein Kandidat für einen stationären Zustand
 </details>
 
 ## Vorlesung 5 Stabilität
@@ -350,13 +359,14 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann ich ein lineares System analysieren? Was bedeuten Eigenwerte und -vektoren in diesem Zusammenhang?
 <details>
     <summary>Antwort</summary>
-    Man kann das system Lösen, dadurch lässt sich bestimen ob das System Osziliert oder stabil ist
+    Mit Eigenwerten und Eigenvektoren sind in diesem Fall die Eigenwerte und -vektoren der Matrix A in x’= Ax + Bu gemeint.
+    Die Eigenwerte zeigen, ob das System stabil ist und ob es oszilliert. Die Eigenvektoren geben die Pfeilrichtung im Phaseplane an.
 </details>
 
 ### Was sagt der Imaginärteil der Eigenwerte über Oszillationen aus?
 <details>
     <summary>Antwort</summary>
-    wenn ein Immaginärteil vorhanden schwingt das System
+    Gibt es mindestens einen komplexen Eigenwert, schwingt das System. Sind alle Realteile 0, aber nicht alle Imaginärteile, so findet theoretisch unendliche Oszillation statt. Das ist für linearisierte Systeme (die eigentlich nichtlinear sind) aber nicht garantiert.
 </details>
 
 ### Was sagt der Realteil der Eigenwerte über Stabilität aus?
@@ -396,35 +406,37 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was ist der Unterschied zwischen Steuerung und Regelung?
 <details>
     <summary>Antwort</summary>
-    Steuerung ist zeitabhänig vorbestimmt, Regelung ist nur abhängig vom vorhergehenden Zustand
+    Steuerung ist zeitabhänig vorbestimmt (open loop), Regelung ist nur abhängig vom vorhergehenden Zustand (closed loop)
 </details>
 
 ### Was ist der Unterschied zwischen Trajektorienregelung und „Set Point“ Regelung?
 <details>
     <summary>Antwort</summary>
-    Trajektorienregelung ist zeitabhängig, man versucht also in jedem zeitpunkt t x_des(t) nahe x(t) zu erreichen.
-    Set point: System soll bis zu zeitpunkt x spätestens stabil sein (?)
+    der Unterschied zwischen "Set-Point" und Trajektorienregelung ist ganz einfach. Bei der Trajektorienregleung ist der gewuenschte Systemzustand zeitabhaengig, waehrend bei er bei "Set-Point" Regelung konstant ist.<br>
+    Beispiel Trajektorienregelung: Ein humanoider Roboter soll mit einer vorgegebenen Geschwindigkeit laufen.<br>
+    Beispiel Set-Point: Der gleiche humanoide Roboter soll auf einem Bein stehen bleiben und moeglichst wenig wackeln.
+
 </details>
 
 ### Was ist ein PD-Regler? Was würde einen PID-Regler ausmachen?
 <details>
     <summary>Antwort</summary>
-    P = Proportional (die Feder) <br>
-    D = Derivative (der Dämpfer) <br>
-    I = Integral 
+    P = Proportional (die Feder; Positionsanteil)  <br>
+    D = Derivative (der Dämpfer; Geschwindigkeitsanteil) <br>
+    I = Integral (Akkumulierter Fehler)
 </details>
 
 ### Was ist ein Zustandsregler?
 <details>
     <summary>Antwort</summary>
-    ein PD reger in Matrixfor also u = Kx
+    ein PD reger in Matrixform also u = Kx
 </details>
 
 ### Was bedeuten open-loop und closed loop?
 <details>
     <summary>Antwort</summary>
     open: steuerung; steuergrößen abhängig von Zeit <br>
-    closed: Abhängig von zustand x(t) (Feedback)
+    closed: regelung; Abhängig von zustand x(t) (Feedback)
 </details>
 
 ### Was bedeutet feedforward und was feedback?
@@ -437,7 +449,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie kann man den geschlossenen Regelkreis als Differentialgleichung beschreiben?
 <details>
     <summary>Antwort</summary>
-    x' = f(x, u(x))
+    x' = f(x, u(x)) <br>
+    mit u(x) = K<sub>D</sub>(x'<sub>des</sub>(t) - x') + K<sub>P</sub>(x<sub>des</sub>(t) - x) + K<sub>I</sub> [Integral] (x<sub>des</sub>(t) - x dt)
 </details>
 
 ### Was ist (über-/unter-)kritische Dämpfung?
@@ -454,7 +467,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Warum ist numerische Integration notwendig?
 <details>
     <summary>Antwort</summary>
-    zum Lösen von nichtlinearen ODEs
+    zum Lösen von nichtlinearen DGLs
 </details>
 
 ### Wie liest man das zeitliche Verhalten aus einem Richtungsfeld?
@@ -481,7 +494,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Warum sind Verfahren 1. Ordnung prinzipiell problematisch?
 <details>
     <summary>Antwort</summary>
-    weil sich approximationsfehler propagieren, sprich in jedem schritt größer werden
+    weil sich approximationsfehler propagieren, sprich in jedem Schritt größer werden
 </details>
 
 ### Was sind Euler-Verfahren?
@@ -505,10 +518,10 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     <summary>Antwort</summary>
     Verfahren der 4. Ordnung. <br>
     <img src="bilder/RK4.PNG" alt="RK4">
-    höherer Zeitaufwand für mehr präzision
+    höherer Zeitaufwand für mehr Präzision
 </details>
 
-### Wodurch entstehen Approximationsfehler?6
+### Wodurch entstehen Approximationsfehler?
 <details>
     <summary>Antwort</summary>
     <li>durch die Integralaproximation</li>
@@ -518,7 +531,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was ist Schrittweitensteuerung?
 <details>
     <summary>Antwort</summary>
-    SChritweitensteuerung ermöglich die minimierung des Approximationsfehlers
+    Die Schrittweite wird so angepasst, dass das Ergebnis möglichst genau wird und sowohl Rundungsfehler als auch Integralapproximationsfehler klein werden. Eventuell verwendet man variable Schrittweiten.
 </details>
 
 
@@ -703,43 +716,59 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was für Fehlerquellen gibt es bei der Parameterschätzung?
 <details>
     <summary>Antwort</summary>
-    <li>Modellierungsfehler <li>
-    test
-    </li></li>
+    <li>Modellierungsfehler
+        <ul>
+            <li>Ungenauigkeit in Modellparametern</li>
+            <li>vereinfachte Modellannahmen </li>
+        </ul>
+    </li>
+    <li>Fehlerakkumulation durch wiederholten Einsatz des Modells</li>
+    <li>Approximationsfehler des iterativen Berechnungsverfahrens</li>
+    <li>Rundungsfehler</li>
+    <li>Programmier-, Implementierungsfehler</li>
 </details>
 
 ### Wie kann man mit Modellfehlern umgehen?
 <details>
     <summary>Antwort</summary>
+    Validieren oder Verifizieren
 </details>
 
 ### Was bedeuten Verifikation und Validierung?
 <details>
     <summary>Antwort</summary>
+    Verifikation: Formaler Nachweis dass ein Modell eine vorgegebene Spezifikation entspricht <br>
+    Validierung: Plausibilitätsprüfung des selbigen durch testen und Beispiele
 </details>
 
 ### Wie unterscheidet sich Verifikation von Programmen zu Verifikation von Modellen? Gibt es ein „wahres“ Modell?
 <details>
     <summary>Antwort</summary>
+    Viele Programme lassen sich Verifizieren, siehe FMISE. <br>
+    Ein Modell ist immer nur so genau wie man es aufstellt, das "wahre" Modell existiert nicht
 </details>
 
 ### Wie unterscheidet sich Validierung von Programmen zu Validierung von Modellen?
 <details>
     <summary>Antwort</summary>
+    validierung ist bei Modellen im gegensatz zu Software nicht nur Testen, man kann auch Hypotesen aufstellen und Intuitionen nachvollziehen
 </details>
 
 ### Was sind Test- und Trainingssets? Wie generiert man diese Datensätze?
 <details>
     <summary>Antwort</summary>
+    Eine Ansammlugn von Eingabe und Ausgabe Werten, die getrennt voneinander einmal zum Trainieren des Modells (parameterschätzung) und einmal zur Validierung dieser genutzt werden
 </details>
 
 ### Was passiert wenn der Testfehler hoch und der Trainingsfehler niedrig ist?
 <details>
     <summary>Antwort</summary>
+    Overfitting: Das Modell kan gut mit der Gegebenen Trajektorie umgehen, diese scheint aber nicht repräsentativ für das System zu sein
 </details>
 
 ### Wann sollte man White-Box Modelle nehmen? Wann nicht?
 <details>
     <summary>Antwort</summary>
+    Soweit wie es geht. Schwer Modellierbare Effekte sollten dann als Black-Box Modell modelliert werden = Grey-Box
 </details>
 
