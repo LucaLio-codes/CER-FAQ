@@ -372,7 +372,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was sagt der Realteil der Eigenwerte über Stabilität aus?
 <details>
     <summary>Antwort</summary>
-    nur wenn alle Realteile der Eigenwerte negativ sind schwingt das system nicht
+    nur wenn alle Realteile der Eigenwerte negativ sind ist das System stabil
 </details>
 
 ### Was passiert bei einem linearen System bei Re(λ) = 0 und Im(λ) != 0?
