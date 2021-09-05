@@ -547,13 +547,13 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Warum ist das problematisch?
 <details>
     <summary>Antwort</summary>
-    wirkt sich negativ auf die numerische Lösbarkeit aus, höhre Schrittweite wird benötigt. (Mehr berechnungen)
+    wirkt sich negativ auf die numerische Lösbarkeit aus, niedrigere Schrittweite wird benötigt. (Mehr berechnungen)
 </details>
 
 ### Gib mehrere praktische Beispiele für steife ODEs!
 <details>
     <summary>Antwort</summary>
-    Doppelpendel(?) 
+    Klimamodelle incl Wetter. Das Wetter aendert sich sehr schnell, waehrend die Effekte von Treibhausgasen usw haeufig Zeitcharakteristika in der Groessenordnung von Jahrzehnten haben.
 </details>
 
 ### Warum sind unstete ODEs wichtig?
@@ -597,22 +597,23 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Welche Fehlerart ist relevanter in der Praxis?
 <details>
     <summary>Antwort</summary>
-    Gerundet wird einmal am Ende, gemessen wird jede relevante Variable, daher tät ich sagen der Messfehler
+    Gerundet wird einmal am Ende, gemessen wird jede relevante Variable, daher tät ich sagen der Messfehler<br>
+    "In der Robotik sicher die Messfehler. Das Rauschen auf realen Sensordaten 
+    ist viel groesser als die Praezision von 64-bit floating point Zahlen."
 </details>
 
 ## Vorlesung 9
 ### Was ist die „Methode der kleinsten Quadrate“ (Least Squares)?
 <details>
     <summary>Antwort</summary>
-    Linear Least Squares Progression betrachtet Modelle der Form <br>
-    Parameter * Feature Funktion
+    Die quadratische Abweichung zwischen Funktionswert und gemessenem Wert soll minimiert werden. <br>
+    "Fast richtig. Wichtig ist noch, dass es in der Regel um mehrere Datenpunkte geht und die Summe aller Quadrate minimiert werden soll und nicht das geometrische Mittel oder aehnliches."
 </details>
 
 ### Welche Kostenfunktion ist hier gemeint?
 <details>
     <summary>Antwort</summary>
-    l(y_i -f(x_i)) also die Funktion die den Fehler als eingabe hat <br>
-    bei leas squares ist es l(e_i) = e_i^2
+    L(θ) = 1/N Σ<sup>N</sup><sub>i=1</sub> (y<sub>i</sub> - f<sub>θ</sub> (x<sub>i</sub>))²
 </details>
 
 ### Welche Annahmen liegen „Least Squares“ zu Grunde?
@@ -621,8 +622,9 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
     kurz: exaktes Messen <br>
     lang: 
     <li>Unabhängige Datenpunkte</li>
-    <li>Alle Datenpunkte Gleichverteilt</li>
-    <li>Kein Rauschen am Eingang</li>
+    <li>Datenpunkte stammen alle aus der gleichen Gaussverteilung</li>
+    <li>perfekte Messung der Eingangsdaten, ABER</li>
+    <li>Rauschen (Gauss verteilt) auf den Ausgangsdaten ist erlabut!</li>
     <li>Eingänge nicht linear korelliert</li>
     <li>Rauschen des Ausgangs ist nicht linear korelliert</li>
 </details>
@@ -631,7 +633,7 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 <details>
     <summary>Antwort</summary>
     <li>Kein Rauschen am Eingang</li>
-    <li>Rauschen des Ausgangs ist nicht linear korelliert?</li>
+    <li>kein Rauschen am Ausgang</li>
 </details>
 
 ### Was sollte man tun, wenn die Eingangsdaten verrauscht sind?
@@ -649,7 +651,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Warum sollte man mehrmals mit unterschiedlichen Daten schätzen?
 <details>
     <summary>Antwort</summary>
-    Um zu verhindern dass die gewählten Parameter nur auf den gewählten Daten passt sondern tatsächlich das System beschreibt (kinda overfitting)
+    Um zu verhindern dass die gewählten Parameter nur auf den gewählten Daten passt sondern tatsächlich das System beschreibt (kinda overfitting) <br>
+    Um mit Mess- und Schätzfehlern umzugehen, da diese im Zweifelsfall abweichende Ergebnisse hervorrufen.
 </details>
 
 ## Vorlesung 10: Black-Box-Modelle
@@ -689,6 +692,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was sind die Probleme mit Basis-Funktionen? Was passiert bei zu vielen oder zu wenigen?
 <details>
     <summary>Antwort</summary>
+    Man braucht für jedes Problem die richtigen Basisfunktionen. Das Problem muss sich als Linearkombination der Basisfunktionen darstellen lassen. <br>
+    Man hat keine Möglichkeit, die Richtigkeit des Ergebnisses mit „Menschenverstand“ zu überprüfen. Eventuell bekommt man unvorhergesehene Ergebnisse.<br>
     Zu wenige: Die Ergebnisse sind Qualitativ schlecht <br>
     zu viele: overfitting (?)
 </details>
@@ -696,13 +701,14 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Wie unterscheiden sich neuronale Netze von Basis Funktion-Ansätzen?
 <details>
     <summary>Antwort</summary>
-    Neuronale Netzwerke sind die aneinanderkettung beliebig vieler Modellen aneinander
+    Neuronale Netze lernen in Hidden Layers selbstständig ihre Features. Daher kann man aber auch schlechter interpretieren, was sie gelernt haben.
+    Bei neuronalen Netzen werden mehrere Systeme hintereinander geschaltet, sodass die Ausgabe von einem System die Eingabe des nächsten ist.
 </details>
 
 ### Was für Funktionen können sie repräsentieren?
 <details>
     <summary>Antwort</summary>
-    Theoretisch ja, praktisch je komplexer das Problem desto mehr Daten werden benötigt, teilweise unpraktikabel
+    Neuronale Netze können alle stetigen Funktionen auf einem kompakten Intervall repräsentieren.
 </details>
 
 ### Wie viele Basis Funktionen kann ein neuronales Netz repräsentieren?
@@ -757,7 +763,8 @@ Gruß geht raus an Jan, der die Fragen selbst formuliert aber nicht gescheit in 
 ### Was sind Test- und Trainingssets? Wie generiert man diese Datensätze?
 <details>
     <summary>Antwort</summary>
-    Eine Ansammlugn von Eingabe und Ausgabe Werten, die getrennt voneinander einmal zum Trainieren des Modells (parameterschätzung) und einmal zur Validierung dieser genutzt werden
+    Eine Ansammlung von Eingabe und Ausgabe Werten, die getrennt voneinander einmal zum Trainieren des Modells (parameterschätzung) und einmal zur Validierung dieser genutzt werden<br>
+    Es gibt viele Möglichkeiten, diese Datensätze zu generieren, beispielsweise teilt man die gemessenen Daten zufällig auf oder aber nach Trajektorien. Auf jeden Fall dürfen sich die Datensätze nicht überschneiden, da die Tests sonst nicht aussagekräftig sind.
 </details>
 
 ### Was passiert wenn der Testfehler hoch und der Trainingsfehler niedrig ist?
